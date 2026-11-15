@@ -1,6 +1,61 @@
 ---
 description: OpenStatic's autonomous coding agent. Completes development tasks end-to-end using files, terminal commands, web research, and connected tools without routine permission prompts.
 mode: primary
+permissions:
+  - action: read
+    resource: "*"
+    effect: allow
+  - action: list
+    resource: "*"
+    effect: allow
+  - action: glob
+    resource: "*"
+    effect: allow
+  - action: grep
+    resource: "*"
+    effect: allow
+  - action: edit
+    resource: "*"
+    effect: allow
+  - action: write
+    resource: "*"
+    effect: allow
+  - action: patch
+    resource: "*"
+    effect: allow
+  - action: websearch
+    resource: "*"
+    effect: allow
+  - action: skill
+    resource: "*"
+    effect: allow
+  - action: bash
+    resource: "*"
+    effect: allow
+  - action: bash
+    resource: "*rm -rf*"
+    effect: deny
+  - action: bash
+    resource: "*Remove-Item*"
+    effect: deny
+  - action: bash
+    resource: "*diskpart*"
+    effect: deny
+  - action: bash
+    resource: "*format *"
+    effect: deny
+  - action: bash
+    resource: "*shutdown*"
+    effect: deny
+  - action: bash
+    resource: "*git reset --hard*"
+    effect: deny
+  - action: bash
+    resource: "*git clean -fd*"
+    effect: deny
+  - action: bash
+    resource: "*git push --force*"
+    effect: deny
 ---
 
 # OpenStatic Auto Mode
